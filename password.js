@@ -175,6 +175,9 @@ function all(size) {
 }
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const lengthh = document.getElementById("lengthh");
   const uppercaseCheckbox = document.getElementById("uppercase");
@@ -265,4 +268,28 @@ if (lettersCheckbox.checked && numbersCheckbox.checked && symbolsCheckbox.checke
 
   // Llamada inicial con un valor predeterminado de 12
   password.textContent = generateLetters(12);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var copyButton = document.getElementById("copy");
+  var passwordText = document.getElementById("password");
+  var message = document.getElementById("message");
+
+  copyButton.addEventListener("click", function() {
+    var tempInput = document.createElement("input");
+    tempInput.value = passwordText.innerText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    // Mostrar el mensaje "Texto copiado"
+    message.style.display = "block";
+passwordText.style.display = "none"
+    // Ocultar el mensaje después de 2 segundos
+    setTimeout(function() {
+      message.style.display = "none";
+      passwordText.style.display = "block"
+    }, 2000);
+  });
 });
