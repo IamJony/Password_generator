@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Password generator</title>
     <script charset="utf-8" src="password.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   </head>
   <body>
@@ -13,6 +15,11 @@
     <h1>Randon Password Generator</h1>
 <div class="content_password">
   <div id="password"></div>
+
+  <button id="copy">
+<i id="copyIcon" class="fa-sharp fa-solid fa-copy fa-beat"></i>
+  </button>
+<div id="message" style="display: none;">Password copied</div>
 </div>
 <div class="content_range">
 <span id="valor">12</span>
