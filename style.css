@@ -16,12 +16,35 @@ h1 {
   background-color: #221e43;
   height: 50px;
   margin: 4px;
+  padding-right: 20px;
   border-radius: 8px;
   display: flex; 
   justify-content: center; 
   align-items: center; 
   padding: 6px;
 }
+
+#copy {
+  position: fixed;
+  left: 324px;
+  z-index: 1000;
+  border: none;
+  background: transparent;
+}
+
+#copyIcon {
+  color: #8288d8;
+  font-size: 19px;
+}
+
+#message {
+position: fixed;
+  left: 130px;
+  z-index: 1000;
+  border: none;
+  color: #cbcbcb;
+}
+
 
 .content_range {
 background-color: #221e43;
@@ -43,7 +66,9 @@ padding: 6px;
 
 #password {
   color: white;
-white-space: nowrap; /* Evitará que el texto se divida en múltiples líneas */
+white-space: nowrap;
+margin-right: 32px;
+/* Evitará que el texto se divida en múltiples líneas */
   overflow: hidden;   /* Ocultar el texto que se desborde */
   text-overflow: ellipsis; 
 }
